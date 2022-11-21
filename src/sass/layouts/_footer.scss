@@ -10,22 +10,21 @@
 
 .footer-container {
     @media screen and (max-width: 479px) {
-        // min-width: 320px;
-              width: 100%;
+     width: 100%;
  }
 
- @media screen and (min-width: 480px) {
-    
- }
+ 
   
 
- @media screen and (min-width: 768px) {
+ @include tablet {
     display: flex;
    align-items: flex-start;
+   justify-content: space-between;
  }
 
- @media screen and (min-width: 1280px) {
+ @include desktop {
     display: flex;
+    justify-content: space-between;
  }
 
 }
@@ -46,13 +45,13 @@
     justify-content: space-between;
     margin-top: 25px;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         margin-top: 0;
        margin-right: 73px;
        margin-left: 61px;
      }
 
-     @media screen and (min-width: 1280px) {
+     @include desktop {
         margin-top: 0;
         margin-right: 281px;
         margin-left: 118px;
@@ -82,25 +81,26 @@
     margin-right: 16px;
 
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         
         margin-right: 0;
      }
 
-    @media screen and (min-width: 1280px) {
+     @include desktop {
         display: block;
+        margin-right: 0;
      }
 }
 
 .social__list {
     display: block;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
         display: flex;
         margin-left: 89px;
      }
 
-     @media screen and (min-width: 1280px) {
+     @include desktop {
         display: block;
         margin-left: 217px;
      }
@@ -109,12 +109,12 @@
 .social__item {
    margin-bottom: 32px; 
 
-   @media screen and (min-width: 768px) {
+   @include tablet {
     margin-bottom: 0;
     margin-right: 16px;
  }  
 
- @media screen and (min-width: 1280px) {
+ @include desktop {
     margin-bottom: 16px;
     margin-right: 0;
  }  
@@ -128,13 +128,16 @@
 
 .social__icon {
     
-    width: 24px;
-    height: 24px;
+     width: 24px;
+     height: 24px;
     border-radius: 50%;
-    align-items: center;
+     background: #fff;
+     display: flex;
+     align-items: center;
     justify-content: center; 
+    fill: #001414
+    
 }
-
 
 
 .footer__text {
