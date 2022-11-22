@@ -391,15 +391,23 @@
         ></textarea>
       </div>
 
-      <div class="btn-flex">
+      <div class="btn-flex form-order__btn-flex">
         <ul class="take-order-btn-list">
           <li>
-            <button type="button" class="btn-big btn-big-prime">
+            <button
+              type="button"
+              class="btn-big btn-big-prime js-open-modal"
+              data-modal="1"
+            >
               Buy it now
             </button>
           </li>
           <li>
-            <button type="button" class="btn-big btn-secondary">
+            <button
+              type="button"
+              class="btn-big btn-secondary js-open-modal"
+              data-modal="2"
+            >
               ADD TO CART
             </button>
           </li>
@@ -410,12 +418,12 @@
 
   <!-- Элементы для вызова модальных окон, могут быть любые -->
 
-  <a href="#" class="js-open-modal" data-modal="1">Открыть окно 1</a>
-  <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a>
+  <!-- <a href="#" class="js-open-modal" data-modal="1">Открыть окно 1</a> -->
+  <!-- <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a> -->
 
   <!-- Несколько модальных окон -->
 
-  <div class="modal" data-modal="1">
+  <div class="modal order__modal" data-modal="1">
     <!--   Svg иконка для закрытия окна  -->
     <svg
       class="modal__cross js-modal-close"
@@ -426,10 +434,21 @@
         d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
       />
     </svg>
-    <p class="modal__title">Заголовок окна 1</p>
+    <p class="modal__title order-comtact-title">Thank you</p>
+    <p class="modal__title order-comtact-title">for your order!</p>
+    <p class="modal__title order-comtact-title">We will contact you</p>
+    <p class="modal__title order-comtact-title order-comtact-title__bottom">
+      soon!
+    </p>
+
+    <a
+      href="../src/accessories.html"
+      class="btn-big btn-big-prime js-open-modal order__button"
+      >KEEP SHOPPING</a
+    >
   </div>
 
-  <div class="modal" data-modal="2">
+  <div class="modal order__modal order__modal--seond" data-modal="2">
     <!--   Svg иконка для закрытия окна  -->
     <svg
       class="modal__cross js-modal-close"
@@ -440,13 +459,19 @@
         d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
       />
     </svg>
-    <p class="modal__title">Заголовок окна 2</p>
+    <p class="modal__title order-comtact-title">Excellent choice!</p>
+    <p class="modal__title order-comtact-title">Let's move on</p>
+    <p class="modal__title order-comtact-title order-comtact-title__bottom">
+      to the checkout!
+    </p>
+
+    <a
+      href="../src/index.html"
+      class="btn-big btn-big-prime js-open-modal order__button"
+      >Let's go!</a
+    >
   </div>
 
   <!-- Подложка под модальным окном -->
   <div class="overlay js-overlay-modal"></div>
-
-<!-- modal -->
-  <!-- <script src="./js/modal.js"></script> -->
-
 </section>
