@@ -111,14 +111,23 @@
   line-height: calc(19 / 16);
   color: var(--secondary-text-color);
   margin-bottom: 8px;
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+    text-shadow: var(--box-shadow);
+  }
+
   @include tablet {
     font-size: 24px;
     line-height: calc(28 / 24);
   }
 }
 
-.contacts-page-email-tel:last-child {
-  margin-bottom: 24px;
+.contacts-page-email-tel {
+  &:last-child {
+    margin-bottom: 24px;
+  }
   @include tablet {
     margin-bottom: 40px;
   }
