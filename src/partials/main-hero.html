@@ -10,9 +10,19 @@
     >
   </div>
   
-  <img src="./images/main-hero-photo/mouse.png" alt="" class="hero__mouse"
-  >
-  <div class="hero__image"></div>
-  <img src="./images/main-hero-photo/headphone.png" alt="" class="hero__headphone">
-  <img src="./images/main-hero-photo/keyboard.png" alt="" class="hero__keyboard">
+<picture class="hero__mouse">
+  <source srcset="./images/main-hero-photo/mouse.png 1x, 
+    ./images/main-hero-photo/mouse-2x.png 2x" type="image/jpeg" />
+  <img src="./images/main-hero-photo/mouse.png" />
+</picture>
+<picture class="hero__headphone">
+  <source srcset="./images/main-hero-photo/headphone.png 1x, 
+    ./images/main-hero-photo/headphone-2x.png 2x" type="image/jpeg" />
+  <img src="./images/main-hero-photo/headphone.png" />
+</picture>
+<picture class="hero__keyboard">
+  <source srcset="./images/main-hero-photo/keyboard.png 1x, 
+      ./images/main-hero-photo/keyboard-2x.png 2x" type="image/jpeg" />
+  <img src="./images/main-hero-photo/headphone.png" />
+</picture>
 </section>
