@@ -5,10 +5,12 @@ body {
 }
 
 .slider {
+  padding-bottom: 48px;
   @include tablet {
     padding: 120px 0;
   }
   @include desktop {
+    padding: 120px 0;
     background-image: url(/src/images/main-slider-photo/BG@1x.jpg);
     background-repeat: no-repeat;
     background-position: 50% 0;
