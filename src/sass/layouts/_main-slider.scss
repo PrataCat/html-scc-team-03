@@ -4,6 +4,26 @@ body {
   background: #01383a;
 }
 
+.slider {
+  padding-bottom: 48px;
+  @include tablet {
+    padding: 120px 0;
+  }
+  @include desktop {
+    padding: 120px 0;
+    background-image: url(/src/images/main-slider-photo/BG@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: auto;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/main-slider-photo/BG@2x.jpg);
+      background-size: contain;
+    }
+  }
+}
+
 .swiper__main-title {
   width: 0;
   height: 0;
