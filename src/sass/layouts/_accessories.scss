@@ -1,18 +1,52 @@
 .accessories {
-  // background-image: url();
+  background-color: #01383a;
+  background-image: url(../images/background/frame-45221-m-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @include mobile {
     padding-top: 40px;
     padding-bottom: 48px;
+    background-image: url(../images/background/frame-45221-m-1x.jpg);
+
+    @includ retina {
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/background/frame-45221-m-2x.jpg);
+      }
+    }
   }
 
   @include tablet {
     padding-top: 120px;
     padding-bottom: 168px;
+    background-image: url(../images/background/frame-4511-t-1x.jpg);
+
+    @includ retina {
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/background/frame-4511-t-2x.jpg);
+      }
+    }
   }
 
   @include desktop {
     padding-bottom: 97px;
+    background-image: url(../images/background/frame391-d-1x.jpg);
+
+    @includ retina {
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/background/frame391-d-2x.jpg);
+      }
+    }
   }
 }
 
