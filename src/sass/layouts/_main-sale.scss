@@ -1,11 +1,7 @@
 .sale {
   padding-bottom: 63px;
-  padding-top: 63px;
   position: relative;
   overflow: hidden;
-  @include tablet {
-    padding-top: 117px;
-  }
 }
 
 .sale-list {
@@ -113,7 +109,6 @@
 }
 
 .sale-tittle {
-  margin-bottom: 35px;
   padding-left: 130px;
   display: block;
   color: #ffffff;
@@ -121,14 +116,15 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
+  @media screen and (max-width: 479px) {
+    padding-left: 80px;
+  }
   @include tablet {
-    margin-bottom: 51px;
     font-size: 56px;
     line-height: 1.17;
     padding-left: 142px;
   }
   @include desktop {
-    margin-bottom: 43px;
   }
 }
 
@@ -170,4 +166,75 @@
 
 .sale-item__link {
   cursor: pointer;
+}
+
+.wrapp-primary-line {
+  display: flex;
+}
+.wrapp-secondary-line {
+  display: flex;
+}
+.primary-box {
+  width: 41%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+  @include tablet {
+    width: 45%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 27%;
+  }
+}
+.secondary-box {
+  width: 59%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 55%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 73%;
+  }
+}
+
+.primary-box2 {
+  width: 42%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    width: 46%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+  @include desktop {
+    width: 27.5%;
+  }
+}
+
+.secondary-box2 {
+  width: 58%;
+  height: 9px;
+  margin-bottom: 24px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    transform: translateY(-12px);
+    width: 54%;
+    height: 20px;
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    width: 72.5%;
+    margin-bottom: 16px;
+  }
 }
