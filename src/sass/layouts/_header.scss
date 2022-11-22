@@ -18,26 +18,11 @@ header {
 }
 
 .header-logo {
-    display: block;
     max-width: 115px;
-    text-align: center;
-    text-transform: uppercase;
-
-    color: var(--primary-text-color);
-
-    @include font(700, 24px, 1.17, null);
-
-    @include tablet {
-        max-width: 156px;
-    }
-
-    @include desktop {
-        max-width: 121px;
-    }
 }
 
 .header-navigation {
-    @include media-max(1280px) {
+    @include media-max(1279px) {
         display: none;
     }
 }
@@ -61,26 +46,8 @@ header {
     }
 }
 
-.menu-open-btn {
-    width: 54px;
-    height: 36px;
-    padding: 0;
-    border: none;
-    fill: var(--accent);
-    background: transparent;
-    cursor: pointer;
-
-    @include desktop {
-        display: none;
-    }
-}
-
-.menu-close-btn {
-    display: none;
-}
-
 .btn-shop {
-    @include media-max(768px) {
+    @include media-max(767px) {
         display: none;
     }
 }
