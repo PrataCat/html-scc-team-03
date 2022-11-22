@@ -66,6 +66,13 @@
     margin-bottom: 16px;
 }
 
+.footer-menue__item:last-child {
+    margin-bottom: 24px; 
+    
+
+ }
+
+
 .footer-menue__link {
     font-family: var(--main-font);
     // font-style: normal;
@@ -140,8 +147,6 @@
        filter: var(--box-shadow-light);
        
     }
-    
-
   }
   
   .social__icon {
