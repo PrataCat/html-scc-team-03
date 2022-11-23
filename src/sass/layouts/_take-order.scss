@@ -253,7 +253,7 @@
     flex-direction: row;
     gap: 40px;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
   }
 }
 
@@ -347,6 +347,22 @@
   }
 }
 
+@include desktop {
+  .form__wrap-contact {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+}
+
+.form__wrapper {
+  flex-basis: calc((100% - 20px) / 2);
+}
+
+.form-order__comment-wrap {
+  flex-basis: calc((100% - 20px) / 2);
+}
+
 .form-order__user-wrap {
   position: relative;
   width: 100%;
@@ -394,6 +410,10 @@
 
 .form-order__select-wrap {
   margin-bottom: 40px;
+  
+  @include desktop {
+    margin-bottom: 0px;
+  }
 }
 
 .form-order__select {
@@ -446,6 +466,10 @@
 
 .form-order__comment-wrap {
   margin-bottom: 24px;
+
+  @include desktop {
+    margin-bottom: 0px;
+  }
 }
 
 .comment-area__text {
