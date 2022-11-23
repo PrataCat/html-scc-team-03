@@ -1,39 +1,44 @@
 .wrapp-primary-line {
   display: flex;
 }
-.wrapp-secondary-line {
+.wrapp-secondary-line-take-order {
   display: flex;
+  margin-bottom: 15px;
+
+  @include desktop {
+    margin-bottom: 39px;
+  }
 }
-.primary-box {
+.primary-box-take-order {
   width: 41%;
   height: 9px;
 
   border-right: 1.5px solid #7be34a;
   border-bottom: 1.5px solid #7be34a;
   @include tablet {
-    width: 45%;
+    width: 53%;
     height: 20px;
   }
   @include desktop {
-    width: 27%;
+    width: 37%;
   }
 }
-.secondary-box {
+.secondary-box-take-order {
   width: 59%;
   height: 9px;
 
   border-top: 1.5px solid #7be34a;
 
   @include tablet {
-    width: 55%;
+    width: 47%;
     height: 20px;
   }
   @include desktop {
-    width: 73%;
+    width: 63%;
   }
 }
 
-.primary-box2 {
+.primary-box2-take-order {
   width: 42%;
   height: 9px;
 
@@ -41,16 +46,16 @@
   border-bottom: 1.5px solid #28780d;
   transform: translateY(-5px);
   @include tablet {
-    width: 46%;
+    width: 54%;
     height: 20px;
     transform: translateY(-12px);
   }
   @include desktop {
-    width: 27.5%;
+    width: 44%;
   }
 }
 
-.secondary-box2 {
+.secondary-box2-take-order {
   width: 58%;
   height: 9px;
 
@@ -58,11 +63,11 @@
   transform: translateY(-5px);
   @include tablet {
     transform: translateY(-12px);
-    width: 54%;
+    width: 46%;
     height: 20px;
   }
   @include desktop {
-    width: 72.5%;
+    width: 73%;
   }
 }
 
@@ -110,19 +115,17 @@
 }
 
 .order__title {
-  margin-bottom: 35px;
   font-weight: 600;
   line-height: 1.17;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 51px;
     margin-left: 59px;
     font-size: 56px;
     line-height: 1.18;
   }
 
   @media screen and (min-width: 1280px) {
-    margin: 0 auto 75px 142px;
+    margin: 0 auto 0px 142px;
   }
 }
 
@@ -564,8 +567,7 @@
 }
 
 .overlay.active .modal {
-  transform: translateX(-50%) scale(1.0);
-
+  transform: translateX(-50%) scale(1);
 }
 
 .overlay .modal {
