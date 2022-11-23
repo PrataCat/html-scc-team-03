@@ -286,12 +286,12 @@
   border-top: 1.5px solid #7be34a;
 
   @include tablet {
-    width: 27%;
+    width: 30%;
     height: 20px;
   }
 
   @include desktop {
-    width: 56%;
+    width: 57%;
   }
 }
 
@@ -323,11 +323,11 @@
 
   @include tablet {
     transform: translateY(-12px);
-    width: 26%;
+    width: 29%;
     height: 20px;
   }
 
   @include desktop {
-    width: 55.5%;
+    width: 56.5%;
   }
 }
