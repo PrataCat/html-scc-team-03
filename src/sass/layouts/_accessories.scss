@@ -1,27 +1,53 @@
 .accessories {
-  // background-image: url(../images/background/hero1-1x.jpg);
-  @include mobile {
-    padding-top: 40px;
-    padding-bottom: 48px;
-    background-image: url(../images/background/frame-45221-m-1x.jpg);
-  }
+  background-color: #01383a;
+  background-image: url(../images/background/frame-45221-m-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 48px;
+
+  //   @includ retina {
+  //     @media (min-device-pixel-ratio: 2),
+  //       (-webkit-min-device-pixel-ratio: 2),
+  //       (min-resolution: 192dpi),
+  //       (min-resolution: 2dppx) {
+  //       background-image: url(../images/background/frame-45221-m-2x.jpg);
+  //     }
+  //   }
 
   @include tablet {
     padding-top: 120px;
     padding-bottom: 168px;
     background-image: url(../images/background/frame-4511-t-1x.jpg);
+
+    @includ retina {
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/background/frame-4511-t-2x.jpg);
+      }
+    }
   }
 
   @include desktop {
     padding-bottom: 97px;
     background-image: url(../images/background/frame391-d-1x.jpg);
+
+    @includ retina {
+      @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/background/frame391-d-2x.jpg);
+      }
+    }
   }
 }
 
 .container-accessories-btn {
-  @include mobile {
-    padding-bottom: 32px;
-  }
+  padding-bottom: 32px;
 
   @include tablet {
     padding-bottom: 72px;
@@ -32,20 +58,6 @@
   }
 }
 
-// .accessories-btn-list {
-// }
-
-// .accessories-wrap {
-
-// }
-
-.accessories-wrap {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 27px;
-}
-
 .accessories-title {
   font-family: 'Roboto';
   font-style: normal;
@@ -54,10 +66,8 @@
   line-height: 1.17;
 
   display: flex;
-  flex-direction: column;
   margin-top: 0;
   margin-bottom: 0;
-  width: 100vw;
 
   color: var(--primary-text-color);
 
@@ -73,81 +83,18 @@
   }
 }
 
-.wrapp-primary-line {
+.accessories-wrap {
   display: flex;
-}
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 27px;
 
-.wrapp-secondary-line {
-  display: flex;
-}
-
-.primary-box {
-  width: 58%;
-  height: 9px;
-
-  border-right: 1.5px solid #7be34a;
-  border-bottom: 1.5px solid #7be34a;
+  @include mobile {
+    padding-top: 16px;
+  }
 
   @include tablet {
-    width: 72%;
-    height: 20px;
-  }
-
-  @include desktop {
-    width: 56%;
-  }
-}
-
-.secondary-box {
-  width: 42%;
-  height: 9px;
-
-  border-top: 1.5px solid #7be34a;
-
-  @include tablet {
-    width: 28%;
-    height: 20px;
-  }
-
-  @include desktop {
-    width: 73%;
-  }
-}
-
-.primary-box2 {
-  width: 59%;
-  height: 9px;
-
-  border-right: 1.5px solid #28780d;
-  border-bottom: 1.5px solid #28780d;
-  transform: translateY(-5px);
-
-  @include tablet {
-    width: 73%;
-    height: 20px;
-    transform: translateY(-12px);
-  }
-
-  @include desktop {
-    width: 57%;
-  }
-}
-
-.secondary-box2 {
-  width: 41%;
-  height: 9px;
-
-  border-top: 1.5px solid #28780d;
-  transform: translateY(-5px);
-
-  @include tablet {
-    transform: translateY(-12px);
-    width: 27%;
-    height: 20px;
-  }
-
-  @include desktop {
-    width: 72.5%;
+    padding-top: 24px;
   }
 }
 
@@ -201,9 +148,6 @@
   }
 }
 
-// .accessories-link {
-// }
-
 .accessories-grid {
   position: relative;
   overflow: hidden;
@@ -232,9 +176,6 @@
     transform: translateY(0);
   }
 }
-
-// .accessories-icon {
-// }
 
 .accessories-thumb {
   position: absolute;
@@ -309,4 +250,84 @@
   padding-right: 19px;
 
   color: #86e543;
+}
+
+// лінії
+
+.wrapp-primary-line {
+  display: flex;
+}
+
+.wrapp-secondary-line {
+  display: flex;
+}
+
+.primary-box {
+  width: 43%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 70%;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 43.5%;
+  }
+}
+
+.secondary-box {
+  width: 62%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 27%;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 56%;
+  }
+}
+
+.primary-box2 {
+  width: 44%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+
+  @include tablet {
+    width: 71%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+
+  @include desktop {
+    width: 44%;
+  }
+}
+
+.secondary-box2 {
+  width: 61%;
+  height: 9px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+
+  @include tablet {
+    transform: translateY(-12px);
+    width: 26%;
+    height: 20px;
+  }
+
+  @include desktop {
+    width: 55.5%;
+  }
 }
