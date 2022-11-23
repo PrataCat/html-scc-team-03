@@ -4,21 +4,23 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 48px;
 
-  @include mobile {
-    padding-top: 40px;
-    padding-bottom: 48px;
-    background-image: url(../images/background/frame-45221-m-1x.jpg);
+  // @include mobile {
+  //   padding-top: 40px;
+  //   padding-bottom: 48px;
+  //   background-image: url(../images/background/frame-45221-m-1x.jpg);
 
-    @includ retina {
-      @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/background/frame-45221-m-2x.jpg);
-      }
-    }
-  }
+  //   @includ retina {
+  //     @media (min-device-pixel-ratio: 2),
+  //       (-webkit-min-device-pixel-ratio: 2),
+  //       (min-resolution: 192dpi),
+  //       (min-resolution: 2dppx) {
+  //       background-image: url(../images/background/frame-45221-m-2x.jpg);
+  //     }
+  //   }
+  // }
 
   @include tablet {
     padding-top: 120px;
@@ -51,9 +53,7 @@
 }
 
 .container-accessories-btn {
-  @include mobile {
-    padding-bottom: 32px;
-  }
+  padding-bottom: 32px;
 
   @include tablet {
     padding-bottom: 72px;
@@ -278,19 +278,19 @@
 }
 
 .primary-box {
-  width: 38%;
+  width: 43%;
   height: 9px;
 
   border-right: 1.5px solid #7be34a;
   border-bottom: 1.5px solid #7be34a;
 
   @include tablet {
-    width: 73%;
+    width: 70%;
     height: 20px;
   }
 
   @include desktop {
-    width: 44%;
+    width: 43.5%;
   }
 }
 
@@ -311,7 +311,7 @@
 }
 
 .primary-box2 {
-  width: 39%;
+  width: 44%;
   height: 9px;
 
   border-right: 1.5px solid #28780d;
@@ -319,13 +319,13 @@
   transform: translateY(-5px);
 
   @include tablet {
-    width: 74%;
+    width: 71%;
     height: 20px;
     transform: translateY(-12px);
   }
 
   @include desktop {
-    width: 44.5%;
+    width: 44%;
   }
 }
 
