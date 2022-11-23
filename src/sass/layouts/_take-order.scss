@@ -1,12 +1,81 @@
+.wrapp-primary-line {
+  display: flex;
+}
+.wrapp-secondary-line {
+  display: flex;
+}
+.primary-box {
+  width: 41%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+  @include tablet {
+    width: 45%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 27%;
+  }
+}
+.secondary-box {
+  width: 59%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 55%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 73%;
+  }
+}
+
+.primary-box2 {
+  width: 42%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    width: 46%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+  @include desktop {
+    width: 27.5%;
+  }
+}
+
+.secondary-box2 {
+  width: 58%;
+  height: 9px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    transform: translateY(-12px);
+    width: 54%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 72.5%;
+  }
+}
+
+// ---------------------
 
 .order {
   padding-top: 40px;
   padding-bottom: 48px;
   margin: 0 auto;
-  background-image: url(../images/take-order-photo/foto_hero/bg_image_mob.jpg);
+  background-image: url('../images/take-order-photo/foto_hero/bg_image_tab.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 0 top 0;
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -53,7 +122,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    margin: 120px auto 75px 142px;
+    margin: 0 auto 75px 142px;
   }
 }
 
@@ -386,34 +455,44 @@
 // ----------- modal------------------------
 
 .modal.order__modal {
-  /* Скрываем окна  */
   opacity: 0;
   visibility: hidden;
-  /*  Установаем ширину окна  */
-  // width: 100%;
-  max-width: 272px;
+  width: 272px;
   height: 383px;
-  /*  Центрируем и задаем z-index */
   position: fixed;
   top: 100px;
   left: 50%;
-  z-index: 30; /* Должен быть выше чем у подложки*/
-  /*  Побочные стили   */
+  z-index: 30;
   background-color: var(--button-text-and-bg);
-
   text-align: center;
   padding-top: 100px;
+  transform: translateX(-50%);
 
-  transform: translate(-50%, 0);
-  transition: transform 600ms linea, transform scale(1);
+  @include tablet {
+    top: 200px;
+    width: 688px;
+    height: 566px;
+    padding-top: 88px;
+  }
+
+  @include desktop {
+    top: 360px;
+    width: 768px;
+    height: 602px;
+    padding-top: 88px;
+  }
 }
 
-.modal.order__modal--seond {
+.modal.order__modal--second {
   height: 367px;
-}
 
-.order__modal.activ {
-  transform: scale(0.8);
+  @include tablet {
+    height: 500px;
+  }
+
+  @include desktop {
+    height: 527px;
+  }
 }
 
 .order-comtact-title {
@@ -423,13 +502,61 @@
   font-size: 24px;
   line-height: 1.17;
   color: var(--primary-text-color);
-  width: 232px;
+
+  @include tablet {
+    font-size: 56px;
+    line-height: 1.18;
+  }
+
+  @include desktop {
+    font-size: 64px;
+    line-height: 1.17;
+  }
 }
 
-.order-comtact-title__bottom {
+.order-comtact-title__first {
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 72px;
+  }
+}
+
+.order-comtact-title__second {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 56px;
+  }
+
 }
 
 .order__button {
   margin: 0 auto;
+}
+
+.modal__wrap {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
+      0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.modal__cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  fill: var(--accent);
+  cursor: pointer;
 }

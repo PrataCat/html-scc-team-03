@@ -1,4 +1,13 @@
 <section class="order">
+  <div class="wrapp-primary-line">
+    <div class="primary-box"></div>
+    <div class="secondary-box"></div>
+  </div>
+  <div class="wrapp-secondary-line">
+    <div class="primary-box2"></div>
+    <div class="secondary-box2"></div>
+  </div>
+
   <div class="container">
     <h1 class="order__title">Take order</h1>
     <div class="order__decor">
@@ -416,62 +425,57 @@
     </form>
   </div>
 
-  <!-- Элементы для вызова модальных окон, могут быть любые -->
-
-  <!-- <a href="#" class="js-open-modal" data-modal="1">Открыть окно 1</a> -->
-  <!-- <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a> -->
-
-  <!-- Несколько модальных окон -->
+  <!-- модальные окона -->
 
   <div class="modal order__modal" data-modal="1">
-    <!--   Svg иконка для закрытия окна  -->
-    <svg
-      class="modal__cross js-modal-close"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-      />
-    </svg>
+    <div class="modal__wrap">
+      <svg
+        class="modal__cross js-modal-close"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+        />
+      </svg>
+    </div>
     <p class="modal__title order-comtact-title">Thank you</p>
     <p class="modal__title order-comtact-title">for your order!</p>
     <p class="modal__title order-comtact-title">We will contact you</p>
-    <p class="modal__title order-comtact-title order-comtact-title__bottom">
+    <p class="modal__title order-comtact-title order-comtact-title__first">
       soon!
     </p>
 
     <a
       href="../src/accessories.html"
-      class="btn-big btn-big-prime js-open-modal order__button"
+      class="btn-big btn-big-prime order__button"
       >KEEP SHOPPING</a
     >
   </div>
 
-  <div class="modal order__modal order__modal--seond" data-modal="2">
-    <!--   Svg иконка для закрытия окна  -->
-    <svg
-      class="modal__cross js-modal-close"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-      />
-    </svg>
+  <div class="modal order__modal order__modal--second" data-modal="2">
+    <div class="modal__wrap">
+      <svg
+        class="modal__cross js-modal-close"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+        />
+      </svg>
+    </div>
+
     <p class="modal__title order-comtact-title">Excellent choice!</p>
     <p class="modal__title order-comtact-title">Let's move on</p>
-    <p class="modal__title order-comtact-title order-comtact-title__bottom">
+    <p class="modal__title order-comtact-title order-comtact-title__second">
       to the checkout!
     </p>
 
-    <a
-      href="../src/index.html"
-      class="btn-big btn-big-prime js-open-modal order__button"
+    <a href="../src/index.html" class="btn-big btn-big-prime order__button"
       >Let's go!</a
     >
   </div>
 
-  <!-- Подложка под модальным окном -->
   <div class="overlay js-overlay-modal"></div>
 </section>
