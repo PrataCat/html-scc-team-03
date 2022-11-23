@@ -130,18 +130,15 @@
 
 .contacts-img {
   @include tablet {
-    border-radius: 12px;
-  }
-  @include desktop {
-    border-radius: 12px;
+    border-radius: 25px;
   }
 }
 
 .contact-photo {
-  @media screen and (max-width: 480px) {
-    z-index: 1;
-    width: 100vw;
-    margin-left: -15px;
+  @include tablet {
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 25px;
   }
 }
 
@@ -209,6 +206,10 @@
   }
 }
 
+.tel-margin {
+  margin-bottom: 8px;
+}
+
 .contacts-page-email-tel {
   font-family: var(--main-font);
 
@@ -216,16 +217,11 @@
   font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--secondary-text-color);
-  margin-bottom: 8px;
 
   &:hover,
   &:focus {
     color: var(--accent);
     text-shadow: var(--box-shadow);
-  }
-
-  &:last-child {
-    margin-bottom: 24px;
   }
 
   @include tablet {
@@ -239,13 +235,18 @@
 }
 
 .form-thumb {
-  margin: 0 auto;
+  margin: 24px auto 48px auto;
   max-width: 591px;
+
+  @include tablet {
+    margin-top: 40px;
+    margin-bottom: 120px;
+  }
 
   @include desktop {
     width: 591px;
     margin-top: 57px;
-    padding-bottom: 80px;
+    margin-bottom: 80px;
   }
 }
 
