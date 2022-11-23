@@ -7,11 +7,6 @@
   padding-top: 40px;
   padding-bottom: 48px;
 
-  // @include mobile {
-  //   padding-top: 40px;
-  //   padding-bottom: 48px;
-  //   background-image: url(../images/background/frame-45221-m-1x.jpg);
-
   //   @includ retina {
   //     @media (min-device-pixel-ratio: 2),
   //       (-webkit-min-device-pixel-ratio: 2),
@@ -20,7 +15,6 @@
   //       background-image: url(../images/background/frame-45221-m-2x.jpg);
   //     }
   //   }
-  // }
 
   @include tablet {
     padding-top: 120px;
@@ -89,9 +83,6 @@
   }
 }
 
-// .accessories-btn-list {
-// }
-
 .accessories-wrap {
   display: flex;
   align-items: flex-start;
@@ -157,9 +148,6 @@
   }
 }
 
-// .accessories-link {
-// }
-
 .accessories-grid {
   position: relative;
   overflow: hidden;
@@ -188,9 +176,6 @@
     transform: translateY(0);
   }
 }
-
-// .accessories-icon {
-// }
 
 .accessories-thumb {
   position: absolute;
