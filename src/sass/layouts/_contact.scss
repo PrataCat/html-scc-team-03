@@ -1,16 +1,8 @@
 .contacts-page {
-  padding-top: 40px;
-  padding-bottom: 48px;
-  margin: 0 auto;
   background-image: url(/src/images/background/frame382-d-1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-  @include tablet {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
 
   @include retina {
     & {
@@ -29,7 +21,6 @@
   }
 
   @media screen and (min-width: 769px) {
-    max-width: 1280px;
     background-image: url(/src/images/background/frame382-d-1x.jpg);
 
     @include retina {
@@ -41,6 +32,7 @@
 }
 
 .contacts-page-title {
+  padding-top: 40px;
   font-family: var(--main-font);
 
   font-weight: 500;
@@ -48,16 +40,16 @@
   line-height: calc(28 / 24);
 
   color: var(--primary-text-color);
-  // margin-bottom: 35px;
 
   @include tablet {
+    margin-left: 59px;
+    padding-top: 120px;
     font-size: 56px;
     line-height: calc(66 / 56);
-    // margin-bottom: 67px;
   }
 
   @include desktop {
-    // margin-bottom: 75px;
+    margin-left: 102px;
   }
 }
 
@@ -69,6 +61,9 @@
   margin-bottom: 24px;
   @include tablet {
     margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 48px;
   }
 }
 .primary-box-contacts {
