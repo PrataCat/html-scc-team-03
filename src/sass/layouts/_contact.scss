@@ -64,68 +64,72 @@
 .wrapp-primary-line {
   display: flex;
 }
-.wrapp-secondary-line {
+.wrapp-secondary-line-contacts {
   display: flex;
+  margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
-.primary-box {
-  width: 41%;
+.primary-box-contacts {
+  width: 39%;
   height: 9px;
 
   border-right: 1.5px solid #7be34a;
   border-bottom: 1.5px solid #7be34a;
   @include tablet {
-    width: 45%;
+    width: 55%;
     height: 20px;
   }
   @include desktop {
-    width: 27%;
+    width: 32%;
   }
 }
-.secondary-box {
-  width: 59%;
+.secondary-box-contacts {
+  width: 61%;
   height: 9px;
 
   border-top: 1.5px solid #7be34a;
 
   @include tablet {
-    width: 55%;
+    width: 45%;
     height: 20px;
   }
   @include desktop {
-    width: 73%;
+    width: 68%;
   }
 }
 
-.primary-box2 {
-  width: 42%;
+.primary-box2-contacts {
+  width: 40%;
   height: 9px;
 
   border-right: 1.5px solid #28780d;
   border-bottom: 1.5px solid #28780d;
   transform: translateY(-5px);
   @include tablet {
-    width: 46%;
+    width: 56%;
     height: 20px;
     transform: translateY(-12px);
   }
   @include desktop {
-    width: 27.5%;
+    width: 32.5%;
   }
 }
 
-.secondary-box2 {
-  width: 58%;
+.secondary-box2-contacts {
+  width: 60%;
   height: 9px;
 
   border-top: 1.5px solid #28780d;
   transform: translateY(-5px);
   @include tablet {
     transform: translateY(-12px);
-    width: 54%;
+    width: 44%;
     height: 20px;
   }
   @include desktop {
-    width: 72.5%;
+    width: 67.5%;
   }
 }
 
