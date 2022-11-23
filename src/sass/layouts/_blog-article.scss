@@ -1,10 +1,85 @@
+.wrapp-primary-line {
+  display: flex;
+}
+.wrapp-secondary-line {
+  display: flex;
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+.primary-box {
+  width: 28%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+  @include tablet {
+    width: 35%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 33%;
+  }
+}
+.secondary-box {
+  width: 73%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 65%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 67%;
+  }
+}
+
+.primary-box2 {
+  width: 29%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    width: 36%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+  @include desktop {
+    width: 33.5%;
+  }
+}
+
+.secondary-box2 {
+  width: 72%;
+  height: 9px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    transform: translateY(-12px);
+    width: 64%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 66.5%;
+  }
+}
+
 .article-title {
   @include font(500, 24px, 1.17, null);
   display: inline-block;
   margin-bottom: 30px;
-  min-width: 288px;
+  // min-width: 288px;
   padding-top: 40px;
-  width: 228px;
+  width: 288px;
   @include tablet {
     @include font(600, 56px, 1, null);
     padding-top: 120px;
