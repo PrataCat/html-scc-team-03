@@ -1,14 +1,17 @@
 (() => {
   const refs = {
+    body: document.querySelector('body'),
     mobMenuBtn: document.querySelector('[data-menu-btn]'),
     menu: document.querySelector('[data-menu]'),
-    body: document.querySelector('body'),
+    svgBurgerIcon: document.querySelector('.icon-open-btn'),
+    svgCrossIcon: document.querySelector('.icon-close-btn')
   };
 
-    refs.mobMenuBtn.addEventListener('click', toggleMenu);
+  refs.mobMenuBtn.addEventListener('click', toggleMenu);
 
   function toggleMenu() {
-    refs.mobMenuBtn.classList.toggle('is-open');
+    refs.svgBurgerIcon.classList.toggle('is-open');
+    refs.svgCrossIcon.classList.toggle('is-open');
     refs.menu.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }

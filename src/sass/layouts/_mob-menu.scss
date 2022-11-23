@@ -62,14 +62,12 @@
     }
 }
 
+.mob-menu-btn .icon-open-btn, 
 .mob-menu-btn .icon-close-btn {
     display: none;
 }
-
-.mob-menu-btn.is-open .icon-open-btn {
-    display: none;
-}
-
-.mob-menu-btn.is-open .icon-close-btn {
+ .mob-menu-btn .is-open {
     display: block;
-}
+ }
+
+
