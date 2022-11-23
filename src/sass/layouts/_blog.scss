@@ -3,6 +3,22 @@
 
   @include tablet {
     padding: 120px 0 120px;
+
+    background-image: url('../images/blog-photo/tablet/bg-tablet-@1x.jpg');
+    background-size: cover;
+
+    @include retina {
+      background-image: url('../images/blog-photo/tablet/bg-tablet-@2x.jpg');
+    }
+  }
+
+  @include desktop {
+    background-image: url('../images/blog-photo/desktop/bg-desktop-@1x.jpg');
+    background-size: cover;
+
+    @include retina {
+      background-image: url('../images/blog-photo/desktop/bg-desktop-@2x.jpg');
+    }
   }
 }
 .container {
@@ -15,6 +31,10 @@
     padding-left: 83px;
 
     @include font(500, 56px, 1.18, null);
+  }
+
+  @include desktop {
+    padding-left: 102px;
   }
 }
 
@@ -36,14 +56,38 @@
   &:not(:last-child) {
     margin-bottom: 24px;
   }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include desktop {
+    &:nth-child(2) .article-preview__title {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .article-preview {
+  @include desktop {
+    padding-left: 508px;
+  }
 }
 
 .article-preview__header {
-  margin-bottom: 16px;
+  position: relative;
+  margin-bottom: 8px;
   box-shadow: none;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    margin-bottom: 24px;
+  }
 }
 
 .article-preview__title {
@@ -54,45 +98,123 @@
   @include tablet {
     @include font(500, 56px, 1, null);
   }
+
+  @include desktop {
+    margin-bottom: 52px;
+  }
 }
 
 .article-preview__top-wrap {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 40px;
+  }
 }
 
 .article-preview__img-wrap {
-  width: 387px;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-508px);
+  }
 }
 
 .article-preview__info-wrap {
+  @include desktop {
+    display: flex;
+    gap: 97px;
+  }
 }
 
 .article-preview__img {
-  margin-bottom: 8px;
+  @include tablet {
+    width: 387px;
+    border-radius: 12px;
+  }
 }
 
 .article-preview__author {
   margin-bottom: 8px;
 
   @include font(500, 16px, 1, null);
+
+  @include tablet {
+    width: 189px;
+    margin-bottom: 32px;
+    @include font(500, 24px, 1, null);
+  }
+
+  @include desktop {
+    width: 248px;
+    margin-bottom: 0;
+  }
 }
 
 .article-preview__update {
   @include font(500, 16px, 1, null);
   color: var(--secondary-text-color);
+
+  @include tablet {
+    width: 261px;
+    @include font(500, 24px, 1, null);
+  }
+
+  @include desktop {
+    width: max-content;
+  }
 }
 
 .article-preview__text {
   margin-bottom: 8px;
 
   @include font(400, 16px, 1.19, null);
+
+  @include tablet {
+    margin-bottom: 16px;
+    @include font(400, 24px, 1.17, null);
+  }
 }
 
 .article-preview__footer {
+  padding-left: 206px;
+
+  @include tablet {
+    padding-left: 565px;
+  }
+
+  @include desktop {
+    padding-left: 569px;
+  }
 }
+
 .article-preview__link {
-  display: block;
+  // display: block;
+
+  transition: text-shadow var(--time-function);
+
+  &:hover,
+  &:focus {
+    text-shadow: var(--box-shadow);
+  }
+
   @include font(500, 16px, 1, null);
   color: var(--accent);
-  text-align: right;
+  // text-align: right;
+
+  @include tablet {
+    @include font(500, 24px, 1, null);
+  }
 }

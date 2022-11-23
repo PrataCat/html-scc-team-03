@@ -79,6 +79,8 @@
               name="text"
               id="user-name"
               placeholder="Name"
+              pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+              required
             />
           </div>
           <div class="form-field">
@@ -88,6 +90,8 @@
               name="email"
               id="user-email"
               placeholder="Email"
+              pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+              required
             />
           </div>
           <div class="form-field">
@@ -96,7 +100,7 @@
             </label>
             <textarea class="form-comment" name="text" id="user-comment"></textarea>
           </div>
-          <button type="button" class="btn-big btn-secondary-light">
+          <button data-modal-open type="button" class="btn-big btn-secondary-light">
             SEND
           </button>
         </form>
@@ -104,5 +108,29 @@
     </div>
   </div>
   </div>
+ <div data-modal class="backdrop is-hidden">
+      <div class="contacts-modal">
+        <button data-modal-close type="button" class="contacts-modal-close">
+          <svg class="contacts-modal-icon" width="12px" height="12px">
+            <use href="/src/images/symbol-defs.svg#icon-akar-icons_cross"></use>
+          </svg>
+        </button>
+        <div class="contacts-modal-thumb">
+      <p class="contacts-modal-text">Thank you</p>
+      <p class="contacts-modal-text">for your message!</p>
+      <p class="contacts-modal-text">We will contact you soon!</p>
+      <a href="./index.html" class="contacts-modal-btn">OK</a>
+    </div>
+    <script src="/src/partials/js/contacts-modal.js"></script>
 </section>
+
+
+
+
+   
+
+
+
+ 
+
 
