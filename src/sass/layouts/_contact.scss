@@ -48,16 +48,84 @@
   line-height: calc(28 / 24);
 
   color: var(--primary-text-color);
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
 
   @include tablet {
     font-size: 56px;
     line-height: calc(66 / 56);
-    margin-bottom: 67px;
+    // margin-bottom: 67px;
   }
 
   @include desktop {
-    margin-bottom: 75px;
+    // margin-bottom: 75px;
+  }
+}
+
+.wrapp-primary-line {
+  display: flex;
+}
+.wrapp-secondary-line {
+  display: flex;
+}
+.primary-box {
+  width: 41%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+  @include tablet {
+    width: 45%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 27%;
+  }
+}
+.secondary-box {
+  width: 59%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 55%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 73%;
+  }
+}
+
+.primary-box2 {
+  width: 42%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    width: 46%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+  @include desktop {
+    width: 27.5%;
+  }
+}
+
+.secondary-box2 {
+  width: 58%;
+  height: 9px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    transform: translateY(-12px);
+    width: 54%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 72.5%;
   }
 }
 
