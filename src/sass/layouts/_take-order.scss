@@ -340,6 +340,11 @@
   line-height: 1.17;
   text-transform: uppercase;
   color: var(--accent);
+
+  @include tablet {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
 }
 
 .form-order__user-wrap {
@@ -378,12 +383,17 @@
   line-height: 1.25;
   text-transform: capitalize;
   color: var(--primary-text-color);
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.17;
+  }
 }
 
 // ------- select-----------
 
 .form-order__select-wrap {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .form-order__select {
@@ -392,32 +402,44 @@
   margin-bottom: 40px;
 }
 
-.label-select {
-  display: block;
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--primary-text-color);
-  border-bottom: 1px solid var(--accent);
-}
-
 .select-color {
   width: 100%;
   appearance: none;
   border: none;
-  background-color: #01383a;
+  border-bottom: 1px solid var(--accent);
+  background-color: var(--button-text-and-bg);
+  background-image: url('../images/take-order-photo/polygon.svg'),
+    linear-gradient(var(--button-text-and-bg), var(--button-text-and-bg));
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
   color: var(--primary-text-color);
   outline: none;
   cursor: pointer;
   padding-top: 0;
   font-size: 16px;
   line-height: 1.25;
+  margin-bottom: 40px;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.17;
+  }
+}
+
+.select-color-end {
+  margin-bottom: 0;
 }
 
 .select-color__option {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.25;
   color: var(--primary-text-color);
-  background-color: #01383a;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.17;
+  }
 }
 
 // ---------------- text area-------------
@@ -428,12 +450,15 @@
 
 .comment-area__text {
   display: block;
-
   color: var(--primary-text-color);
-
   font-size: 16px;
   line-height: 1.25;
   color: #cdcdcd;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.17;
+  }
 }
 
 .comment-area__message {
@@ -447,6 +472,10 @@
   background-color: #01383a;
   outline: transparent;
   cursor: pointer;
+
+  @include tablet {
+    height: 256px;
+  }
 }
 
 .form-order__btn-flex {
@@ -463,12 +492,15 @@
   width: 272px;
   height: 383px;
   position: fixed;
+  z-index: 130;
   top: 100px;
   left: 50%;
-  z-index: 30;
+  transform: translateX(-50%);
   background-color: var(--button-text-and-bg);
   text-align: center;
   padding-top: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @include tablet {
     top: 200px;
@@ -478,7 +510,9 @@
   }
 
   @include desktop {
-    top: 360px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 768px;
     height: 602px;
     padding-top: 88px;
@@ -562,14 +596,7 @@
   cursor: pointer;
 }
 
-.modal {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay.active .modal {
-  transform: translateX(-50%) scale(1);
-}
-
-.overlay .modal {
-  transform: translateX(-50%) scale(0.8);
+.overlay.active {
+  transform: scale(1);
+  // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
