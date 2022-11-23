@@ -7,12 +7,12 @@
   padding-top: 40px;
   padding-bottom: 48px;
 
-  //   @includ retina {
-  //     @media (min-device-pixel-ratio: 2),
-  //       (-webkit-min-device-pixel-ratio: 2),
-  //       (min-resolution: 192dpi),
-  //       (min-resolution: 2dppx) {
-  //       background-image: url(../images/background/frame-45221-m-2x.jpg);
+  // @includ retina {
+  //   @media (min-device-pixel-ratio: 2),
+  //     (-webkit-min-device-pixel-ratio: 2),
+  //     (min-resolution: 192dpi),
+  //     (min-resolution: 2dppx) {
+  //     background-image: url(../images/background/frame-45221-m-2x.jpg);
   //     }
   //   }
 
@@ -254,15 +254,15 @@
 
 // лінії
 
-.wrapp-primary-line {
+.accessories__wrapp-primary-line {
   display: flex;
 }
 
-.wrapp-secondary-line {
+.accessories__wrapp-secondary-line {
   display: flex;
 }
 
-.primary-box {
+.accessories__primary-box {
   width: 43%;
   height: 9px;
 
@@ -279,7 +279,7 @@
   }
 }
 
-.secondary-box {
+.accessories__secondary-box {
   width: 62%;
   height: 9px;
 
@@ -295,7 +295,7 @@
   }
 }
 
-.primary-box2 {
+.accessories__primary-box2 {
   width: 44%;
   height: 9px;
 
@@ -314,7 +314,7 @@
   }
 }
 
-.secondary-box2 {
+.accessories__secondary-box2 {
   width: 61%;
   height: 9px;
 
