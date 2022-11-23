@@ -137,7 +137,7 @@
 }
 
 .sale-tittle {
-  padding-left: 130px;
+  padding-left: 120px;
   display: block;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
@@ -196,13 +196,13 @@
   cursor: pointer;
 }
 
-.wrapp-primary-line {
+.wrapp-primary-line__sale {
   display: flex;
 }
-.wrapp-secondary-line {
+.wrapp-secondary-line__sale {
   display: flex;
 }
-.primary-box {
+.primary-box__sale {
   width: 41%;
   height: 9px;
 
@@ -216,7 +216,7 @@
     width: 27%;
   }
 }
-.secondary-box {
+.secondary-box__sale {
   width: 59%;
   height: 9px;
 
@@ -231,7 +231,7 @@
   }
 }
 
-.primary-box2 {
+.primary-box2__sale {
   width: 42%;
   height: 9px;
 
@@ -248,7 +248,7 @@
   }
 }
 
-.secondary-box2 {
+.secondary-box2__sale {
   width: 58%;
   height: 9px;
   margin-bottom: 24px;
