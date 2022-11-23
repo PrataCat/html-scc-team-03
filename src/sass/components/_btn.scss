@@ -172,12 +172,16 @@
   @include desktop {
     gap: 44px;
   }
+
+  @media screen and (max-width: 479px) {
+    gap: 15px;
+  }
 }
 
 .btn-accessories {
   @extend %btn;
 
-  min-width: 124px;
+  width: 124px;
   height: 35px;
 
   font-size: 16px;

@@ -1,15 +1,51 @@
-.hero__container {
-  @extend %flex-jc-ac;
+.hero {
+  position: relative;
+
+  background-image: url(../images/background/hero1-1x.jpg);
+  background-position: 80% 90%;
   padding-top: 180px;
+  padding-bottom: 127px;
+  overflow: hidden;
+  @include tablet {
+      padding-bottom: 208px;
+      padding-top: 154px;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    @include desktop {
+      padding-left: 142px;
+      padding-top: 180px;
+      padding-bottom: 209px;
+      background-position: bottom;
+    }
+
+}
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/background/hero1-2x.jpg);
+    background-position: 80% 90%;
+    overflow: hidden;
+  }
+}
+
+
+.hero__container {
+  margin-bottom: 25px;
+  @extend %flex-jc-ac;
+
   @include tablet {
     justify-content: start;
     padding-left: 40px;
-    padding-top: 154px;
+    margin-bottom: 94px;
   }
+
   @include desktop {
     justify-content: start;
-    padding-left: 142px;
-    padding-top: 180px;
+    padding-left: 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -19,17 +55,19 @@
   font-family: 'Roboto', sans-serif;
   @include font(600, 32px, calc(38 / 32), 0);
   text-align: center;
-  margin-bottom: 25px;
+
+
   @include tablet {
     width: 515px;
     @include font(0, 56px, calc(66 / 56), 0);
     text-align: start;
-    margin-bottom: 94px;
+   
   }
+
   @include desktop {
     width: 515px;
     @include font(0, 64px, calc(75 / 64), 0);
-    margin-bottom: 40px;
+    
   }
 }
 
@@ -38,6 +76,78 @@
     padding-left: 41px;
   }
   @include desktop {
-    padding-left: 142px;
+  padding-left: 0;
+  }
+}
+.hero__img-wrapper{
+  height: 100%;
+}
+
+.hero__mouse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: luminosity;
+
+  width: 60px;
+  height: 99px;
+  transform: translate(-127px, -179px) rotate(-29deg);
+
+  @include tablet {
+    width: 100px;
+    height: 165px;
+    transform: translate(48px, -350px) rotate(-31.92deg);
+  }
+  @include desktop {
+    width: 133px;
+    height: 220px;
+    transform: translate(10px, -334px) rotate(-34deg);
+  }
+}
+
+.hero__headphone {
+  position: absolute;
+  z-index: 0;
+
+  width: 150px;
+  height: 186px;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(15px, -273px) rotate(28deg);
+  mix-blend-mode: luminosity;
+
+  @include tablet {
+    width: 180px;
+    height: 223px;
+    transform: translate(167px, -183px) rotate(10.77deg);
+  }
+    @include desktop {
+    width: 270px;
+    height: 335px;
+    transform: translate(230px, -175px) rotate(18deg);
+  }
+}
+
+.hero__keyboard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 88px;
+  height: 42px;
+
+  transform: translate(-7px, 160px) rotate(24deg);
+  mix-blend-mode: luminosity;
+
+  @include tablet {
+    width: 143px;
+    height: 69px;
+    transform: translate(10px, 80px) rotate(21.68deg);
+  }
+      @include desktop {
+    width: 230px;
+    height: 111px;
+    transform: translate(-40px, 120px) rotate(30deg);
   }
 }

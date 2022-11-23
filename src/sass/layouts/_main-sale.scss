@@ -1,10 +1,71 @@
 .sale {
-  padding-bottom: 64px;
-  padding-top: 24px;
+  padding-bottom: 63px;
+  position: relative;
+  overflow: hidden;
+  @include tablet {
+    background-image: url(../images/background/frame-4511-t-1x.jpg);
+    background-position-y: -127px;
+    background-position-x: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .sale {
+        background-image: url(../images/background/frame4511-t-2x.jpg);
+      }
+    }
+  }
+  @include desktop {
+    background-image: url(../images/background/bg-d-2x.jpg);
+    background-position: 80% -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .sale {
+        background-image: url(../images/background/bg-d-2x.jpg);
+      }
+    }
+  }
+}
+
+.sale-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  @include tablet {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: unset;
+    @include desktop {
+      gap: 20px;
+      justify-content: unset;
+      flex-direction: unset;
+    }
+  }
 }
 
 .sale-item {
-  margin-bottom: 24px;
+  width: 100%;
+  @include mobile {
+    width: 285px;
+  }
+  @include tablet {
+    width: 285px;
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 4);
+  }
+}
+
+.sale-item img {
+  border-radius: 12px;
 }
 
 .sale-item__box {
@@ -58,31 +119,65 @@
 
 .photo-line_one {
   position: absolute;
-  top: 28;
+  top: -61px;
+  @include tablet {
+    top: 54px;
+    width: 1280px;
+  }
 }
 
 .photo-line_two {
   position: absolute;
-  top: 40;
+  top: -52px;
+  @include tablet {
+    top: 61px;
+    left: -94px;
+    width: 1280px;
+  }
 }
 
 .sale-tittle {
-  position: absolute;
-  top: 20px;
-  left: 80px;
+  padding-left: 120px;
+  display: block;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
+  @media screen and (max-width: 479px) {
+    padding-left: 80px;
+  }
+  @include tablet {
+    font-size: 56px;
+    line-height: 1.17;
+    padding-left: 142px;
+  }
+  @include desktop {
+  }
 }
 
 .btn-view-all {
   @extend %btn;
   margin: 0 auto;
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 28px;
+    width: 195px;
+    height: 65px;
+  }
   width: 153px;
   height: 51px;
 
+  @include tablet {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+  }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18;
   color: var(--button-text-and-bg);
   background: var(--primary-text-color);
   border: 1px solid var(--primary-text-color);
@@ -94,5 +189,84 @@
   &:focus {
     box-shadow: var(--box-shadow-view-all);
     transition: all var(--timing-function);
+  }
+}
+
+.sale-item__link {
+  cursor: pointer;
+}
+
+.wrapp-primary-line__sale {
+  display: flex;
+}
+.wrapp-secondary-line__sale {
+  display: flex;
+  margin-bottom: 24px;
+  @include tablet {
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+.primary-box__sale {
+  width: 41%;
+  height: 9px;
+
+  border-right: 1.5px solid #7be34a;
+  border-bottom: 1.5px solid #7be34a;
+  @include tablet {
+    width: 45%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 27%;
+  }
+}
+.secondary-box__sale {
+  width: 59%;
+  height: 9px;
+
+  border-top: 1.5px solid #7be34a;
+
+  @include tablet {
+    width: 55%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 73%;
+  }
+}
+
+.primary-box2__sale {
+  width: 42%;
+  height: 9px;
+
+  border-right: 1.5px solid #28780d;
+  border-bottom: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    width: 46%;
+    height: 20px;
+    transform: translateY(-12px);
+  }
+  @include desktop {
+    width: 27.5%;
+  }
+}
+
+.secondary-box2__sale {
+  width: 58%;
+  height: 9px;
+
+  border-top: 1.5px solid #28780d;
+  transform: translateY(-5px);
+  @include tablet {
+    transform: translateY(-12px);
+    width: 54%;
+    height: 20px;
+  }
+  @include desktop {
+    width: 72.5%;
   }
 }
