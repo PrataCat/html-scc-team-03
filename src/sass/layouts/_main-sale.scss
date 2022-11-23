@@ -2,6 +2,34 @@
   padding-bottom: 63px;
   position: relative;
   overflow: hidden;
+  @include tablet {
+    background-image: url(../images/background/frame-4511-t-1x.jpg);
+    background-position-y: -127px;
+    background-position-x: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .sale {
+        background-image: url(../images/background/frame4511-t-2x.jpg);
+      }
+    }
+  }
+  @include desktop {
+    background-image: url(../images/background/bg-d-2x.jpg);
+    background-position: 80% -10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .sale {
+        background-image: url(../images/background/bg-d-2x.jpg);
+      }
+    }
+  }
 }
 
 .sale-list {
