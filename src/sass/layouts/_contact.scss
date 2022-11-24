@@ -217,6 +217,9 @@
   font-size: 16px;
   line-height: calc(19 / 16);
   color: var(--secondary-text-color);
+  transition-property: color, text-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
   &:hover,
   &:focus {
@@ -327,32 +330,6 @@
   }
 }
 
-.btn-big {
-  @extend %btn;
-
-  width: 173px;
-  height: 51px;
-  font-size: 16px;
-
-  text-transform: uppercase;
-
-  @include tablet {
-    width: 306px;
-    height: 70px;
-    font-size: 32px;
-  }
-}
-
-.btn-secondary-light {
-  color: var(--primary-text-color);
-  background: var(--button-text-and-bg);
-  border: 1px solid var(--primary-text-color);
-  margin: 0 auto;
-
-  @include desktop {
-    margin: 0;
-  }
-}
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.61, 0.355, 1)
     both;

@@ -32,6 +32,10 @@
 
   font-size: 14px;
 
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
   &:hover,
   &:focus {
     box-shadow: var(--box-shadow);
@@ -88,6 +92,10 @@
   background: var(--accent);
   border: 1px solid var(--accent);
 
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
   &:hover,
   &:focus {
     box-shadow: var(--box-shadow);
@@ -98,6 +106,10 @@
   color: var(--accent);
   background: var(--button-text-and-bg);
   border: 1px solid var(--accent);
+
+  transition-property: filter;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
   &:hover,
   &:focus {
@@ -110,6 +122,10 @@
   color: var(--primary-text-color);
   background: var(--button-text-and-bg);
   border: 1px solid var(--primary-text-color);
+
+  transition-property: filter;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
   &:hover,
   &:focus {
@@ -132,6 +148,10 @@
   border: 1px solid var(--primary-text-color);
 
   font-size: 16px;
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
   &:hover,
   &:focus {
@@ -185,6 +205,10 @@
   height: 35px;
 
   font-size: 16px;
+
+  transition-property: box-shadow, color, background;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
   &:hover,
   &:focus {
