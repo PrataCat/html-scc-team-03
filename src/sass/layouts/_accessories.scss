@@ -1,11 +1,17 @@
 .accessories {
-  background-color: #01383a;
-  background-image: url(../images/background/frame-45221-m-1x.jpg);
+  background-color: var(--button-text-and-bg);
+  background-image: url(../images/accessories-photo/mobil/bg-mobil-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding-top: 40px;
   padding-bottom: 48px;
+
+  @include retina {
+      & {
+        background-image: url(../images/accessories-photo/mobil/bg-mobile-2x.jpg);
+      }
+    }
 
   // @includ retina {
   //   @media (min-device-pixel-ratio: 2),
@@ -19,30 +25,40 @@
   @include tablet {
     padding-top: 120px;
     padding-bottom: 168px;
-    background-image: url(../images/background/frame-4511-t-1x.jpg);
+    background-image: url(../images/accessories-photo/tablet/bg-tablet-1x.jpg);
 
-    @includ retina {
-      @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/background/frame-4511-t-2x.jpg);
+    // @includ retina {
+    //   @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //     background-image: url(../images/background/frame-4511-t-2x.jpg);
+    //   }
+    // }
+    @include retina {
+      & {
+        background-image: url(../images/accessories-photo/tablet/bg-tablet-2x.jpg);
+        }
       }
-    }
   }
 
   @include desktop {
     padding-bottom: 97px;
-    background-image: url(../images/background/frame391-d-1x.jpg);
+    background-image: url(../images/accessories-photo/desktop/bg-desktop-1x.jpg);
 
-    @includ retina {
-      @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        background-image: url(../images/background/frame391-d-2x.jpg);
+    // @includ retina {
+    //   @media (min-device-pixel-ratio: 2),
+    //     (-webkit-min-device-pixel-ratio: 2),
+    //     (min-resolution: 192dpi),
+    //     (min-resolution: 2dppx) {
+    //     background-image: url(../images/background/frame391-d-2x.jpg);
+    //   }
+    // }
+    @include retina {
+      & {
+        background-image: url(../images/accessories-photo/desktop/bg-desktop-2x.jpg);
+        }
       }
-    }
   }
 }
 
