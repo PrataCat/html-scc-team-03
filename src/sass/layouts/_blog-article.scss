@@ -101,19 +101,29 @@
 }
 
 .img-name {
-  @include font(600, 16px, 1, null);
+  @include font(500, 16px, 1, null);
   margin-bottom: 8px;
   @include tablet {
     color: var(--accent);
-    @include font(600, 24px, 1, null);
+    @include font(500, 24px, 1, null);
+    max-width: 134px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    max-width: 100%;
   }
 }
 .img-text {
   color: var(--secondary-text-color);
-  @include font(600, 16px, 1, null);
+  @include font(500, 16px, 1, null);
   margin-bottom: 8px;
   @include tablet {
-    @include font(600, 24px, 1, null);
+    @include font(500, 24px, 1, null);
+    max-width: 261px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    max-width: 100%;
   }
 }
 .img-wrap {
@@ -127,8 +137,9 @@
     display: flex;
     gap: 40px;
     align-items: flex-end;
-    margin-bottom: 16px;
+    margin-bottom: 0;
   }
+  
 }
 .img-text-wrap {
   @include tablet {
