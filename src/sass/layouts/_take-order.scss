@@ -203,6 +203,8 @@
   margin: 0 auto 24px auto;
   border-radius: 12px;
   overflow: hidden;
+  transition: box-shadow var(--timing-function);
+
 
   @media screen and (min-width: 768px) {
     margin: 0;
@@ -217,13 +219,12 @@
   }
 
   &:hover {
-    border: solid 3px var(--accent);
     box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
       0px 4px 10px rgba(255, 255, 255, 0.1);
   }
 
   &:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
@@ -303,6 +304,7 @@
 }
 
 .gallery__item {
+  transition: box-shadow var(--timing-function);
   flex-basis: calc((100% - 48px) / 4);
 
   @media screen and (min-width: 768px) {
@@ -312,29 +314,29 @@
   @media screen and (min-width: 1280px) {
     flex-basis: calc((100% - 72px) / 4);
   }
+
+  &:hover .gallery__wrap-image {
+    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
+      0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
 }
 
 .gallery__wrap-image {
   width: 100%;
   border-radius: 6px;
   overflow: hidden;
-
-  &:hover {
-    border: solid 3px var(--accent);
-    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
-      0px 4px 10px rgba(255, 255, 255, 0.1);
-  }
-
-  &:hover > img {
-    transform: scale(0.8);
-  }
+  transition: border var(--timing-function);
 }
 
-.gallery__wrap-image > img {
+.gallery__item img {
   object-fit: cover;
   object-position: center;
-  // transform: scale(1);
-  // transition: transform var(--timing-function);
+  transform: scale(1);
+  transition: transform var(--timing-function);
 }
 
 // ---------------- FORM ------------------------
