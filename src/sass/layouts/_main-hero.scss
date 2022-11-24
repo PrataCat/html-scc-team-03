@@ -7,30 +7,30 @@
   padding-bottom: 127px;
   overflow: hidden;
   @include tablet {
-      padding-bottom: 208px;
-      padding-top: 154px;
-      background-position: center;
-      background-size: cover;
-    }
-  
-    @include desktop {
-      padding-left: 142px;
-      padding-top: 180px;
-      padding-bottom: 209px;
-      background-position: bottom;
-    }
+    padding-bottom: 208px;
+    padding-top: 154px;
+    background-position: center;
+    background-size: cover;
+  }
 
+  @include desktop {
+    padding-left: 142px;
+    padding-top: 180px;
+    padding-bottom: 209px;
+    background-position: bottom 50%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 }
 @media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
     background-image: url(../images/background/hero1-2x.jpg);
     background-position: 80% 90%;
     overflow: hidden;
   }
 }
-
 
 .hero__container {
   margin-bottom: 25px;
@@ -56,18 +56,15 @@
   @include font(600, 32px, calc(38 / 32), 0);
   text-align: center;
 
-
   @include tablet {
     width: 515px;
     @include font(0, 56px, calc(66 / 56), 0);
     text-align: start;
-   
   }
 
   @include desktop {
     width: 515px;
     @include font(0, 64px, calc(75 / 64), 0);
-    
   }
 }
 
@@ -76,10 +73,11 @@
     padding-left: 41px;
   }
   @include desktop {
-  padding-left: 0;
+    padding-left: 0;
   }
 }
-.hero__img-wrapper{
+
+.hero__img-wrapper {
   height: 100%;
 }
 
@@ -122,7 +120,7 @@
     height: 223px;
     transform: translate(167px, -183px) rotate(10.77deg);
   }
-    @include desktop {
+  @include desktop {
     width: 270px;
     height: 335px;
     transform: translate(230px, -175px) rotate(18deg);
@@ -145,7 +143,7 @@
     height: 69px;
     transform: translate(10px, 80px) rotate(21.68deg);
   }
-      @include desktop {
+  @include desktop {
     width: 230px;
     height: 111px;
     transform: translate(-40px, 120px) rotate(30deg);
