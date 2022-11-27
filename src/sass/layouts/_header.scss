@@ -24,6 +24,12 @@
 
 .header-logo {
   max-width: 115px;
+  transition: color, var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
 }
 
 .header-navigation {
