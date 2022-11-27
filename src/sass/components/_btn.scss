@@ -107,9 +107,7 @@
   background: var(--button-text-and-bg);
   border: 1px solid var(--accent);
 
-  transition-property: filter;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition: filter, var(--timing-function);
 
   &:hover,
   &:focus {
@@ -206,9 +204,7 @@
 
   font-size: 16px;
 
-  transition-property: box-shadow, color, background;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
+  transition: box-shadow, color, background, var(--timing-function);
 
   &:hover,
   &:focus {
