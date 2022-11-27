@@ -164,10 +164,10 @@
        transform: translate3d(0, 0, 0);
 
        @include tablet {
-       transform: translatex(-46%);
+       transform: translatex(-42%);
       }
        @include desktop {
-        transform: translate3d(0, -33%, 0);
+        transform: translate3d(0, -32%, 0);
         }
      }
     .share__button {
@@ -289,10 +289,10 @@
       transform: translate3d(0, 0, 0);
 
       @include tablet {
-       transform: translatex(-46%);
+       transform: translatex(-42%);
       }
       @include desktop {
-        transform: translate3d(0, -33%, 0);
+        transform: translate3d(0, -32%, 0);
       }
     }
    }
@@ -314,7 +314,7 @@
   text-transform: uppercase;
    height: 24px;
    width: 70px;
-   font-size: 10px;
+   font-size: 8px;
    transform: translate(105%, 0);
    display: flex;
    writing-mode: initial;
@@ -329,8 +329,9 @@
     display: block;
     padding-top: 22px;
     height: 100px;
+    letter-spacing: -0.2em;
     width: 24px;
-    font-size: 6.5px;
+    font-size: 8px;
     writing-mode: vertical-rl;
     text-orientation: upright;
     text-align:center;
@@ -344,6 +345,7 @@
   @include desktop {
     height: 24px;
     width: 70px;
+    letter-spacing: 0.01em;
     font-size: 10px;
      padding-bottom: 10px;
     transform: translate(105%, 0);
