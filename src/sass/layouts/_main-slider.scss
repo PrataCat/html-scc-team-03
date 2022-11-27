@@ -1,9 +1,5 @@
 @import './node_modules/swiper/swiper';
 
-body {
-  background: #01383a;
-}
-
 .slider {
   padding-bottom: 48px;
   @include tablet {
@@ -32,7 +28,6 @@ body {
 .swiper {
   height: 548px;
   margin-bottom: 48px;
-  background: #01383a;
 }
 
 .swiper-wrapper {
