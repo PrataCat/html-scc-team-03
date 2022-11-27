@@ -4,7 +4,8 @@
     mobMenuBtn: document.querySelector('[data-menu-btn]'),
     menu: document.querySelector('[data-menu]'),
     svgBurgerIcon: document.querySelector('.icon-open-btn'),
-    svgCrossIcon: document.querySelector('.icon-close-btn')
+    svgCrossIcon: document.querySelector('.icon-close-btn'),
+    particl: document.querySelector('.particl'),
   };
 
   refs.mobMenuBtn.addEventListener('click', toggleMenu);
@@ -14,5 +15,6 @@
     refs.svgCrossIcon.classList.toggle('is-open');
     refs.menu.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
+    refs.particl.classList.toggle('active');
   }
 })();
