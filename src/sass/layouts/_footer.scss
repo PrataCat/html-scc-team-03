@@ -127,9 +127,9 @@
 .social__link {
   position: absolute;
   top:0;
-  left: 0;
+  left: 2%;
  
-  transform: translatex(290%);
+  transform: translatex(295%);
 
 
   width: 24px;
@@ -143,27 +143,39 @@
 
 
    @include tablet {
-    top: 25%;
-    left: 105%;
+    top: 24%;
+    left: 101%;
     transform: translate(-100%, -100%);
 
   }
 
   @include desktop {
-    top:50%;
+    top:51%;
+    left: 100%;
     transform: translate(-100%, -50%);
   }
 
   &:hover,
   &:focus {
     filter: var(--box-shadow-light);
-    
 
-    .share__button-secondary--content {
-      transform: translate3d(0, 0, 0);
-      
+  
+     .share__button-secondary--content {
+       transform: translate3d(0, 0, 0);
+
+       @include tablet {
+       transform: translatex(-46%);
+      }
+       @include desktop {
+        transform: translate3d(0, -33%, 0);
+        }
+     }
+    .share__button {
+      cursor: pointer;
+     background-color: var(--accent);
+      box-shadow: 0 4px 4px #86e54333;
+      border: 1px solid #86e543; 
     }
-
   }
 
 }
@@ -174,7 +186,14 @@
 
   &:hover,
   &:focus {
-    fill: #86e543;
+    fill: var(--accent);
+
+    .share__button {
+      cursor: pointer;
+     background-color: var(--accent);
+      box-shadow: 0 4px 4px #86e54333;
+      border: 1px solid #86e543; 
+    }
   }
 }
 
@@ -223,12 +242,12 @@
 .footer__logo {
   &:hover,
   &:focus {
-    color: #86e543;
+    color: var(--accent);
   }
 }
 // -----anime
-.share__buttons {
-}
+// .share__buttons {
+// }
   
 
 .share__button {
@@ -237,16 +256,15 @@
     width: 95px;
     height: 24px;
     border-radius: 12px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--timing-function);
     transition: background-color var(--timing-function);
-    // box-shadow: 0 4px 4px #86e54333;
-    // border: 1px solid #86e543;
+  
 
     @include tablet {
       display: block;
       width: 24px;
       height: 100px;
-      padding-top: 2px;
+     
 
     }
   
@@ -257,80 +275,82 @@
     }
 
 
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-color: #86e543;
-    box-shadow: 0 4px 4px #86e54333;
-    border: 1px solid #86e543;
-    
-    .share__button-secondary--content {
-      transform: translate3d(0, 0, 0);
+   &:hover,
+   &:focus {
+     cursor: pointer;
+     background-color: var(--accent);
+     box-shadow: 0 4px 4px #86e54333;
+     
+
+     .social__icon{
+       fill: var(--accent);
     }
-  }
+     .share__button-secondary--content {
+      transform: translate3d(0, 0, 0);
+
+      @include tablet {
+       transform: translatex(-46%);
+      }
+      @include desktop {
+        transform: translate3d(0, -33%, 0);
+      }
+    }
+   }
 }
 
 .share__button-secondary {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 12px;
 
  }
 
 .share__button-secondary--content {
   font-family: var(--main-font);
   font-weight: 400;
-  // font-size: 8px;
   line-height: 0.4;
   letter-spacing: 0.01em;
   text-transform: capitalize;
-  background:#86e543;
   text-transform: uppercase;
    height: 24px;
    width: 70px;
    font-size: 10px;
-  //  padding-top: 2px;
-   transform: translate3d(105%, 0, 0);
+   transform: translate(105%, 0);
    display: flex;
    writing-mode: initial;
    justify-content: center; 
    align-items: center; 
 
-  color:#001414;
-  border-radius: 15px;
-  transition: transform 250ms ease;
+  color: var(--primary-text-color);
+  border-radius: 12px;
+  transition: transform var(--timing-function);
 
   @include tablet {
     display: block;
-    padding-left: 2px;
-    padding-top: 8px;
-    height: 95px;
-    width: 12px;
+    padding-top: 22px;
+    height: 100px;
+    width: 24px;
     font-size: 6.5px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    text-align: end;
-    // font-size: .2em;
+    text-align:center;
     justify-content: center; 
     align-items: center; 
      text-transform: uppercase;
-    transform: translate3d(0, -105%, 0);
-    // border-radius: 15px 0 15px 15px;
-  }
-
-  @include desktop {
-    height: 12px;
-    width: 70px;
-    font-size: 10px;
-    padding-top: 2px;
-    transform: translate3d(105%, 0, 0);
-    display: flex;
-    writing-mode: initial;
-    justify-content: center; 
-    align-items: center; 
+    transform: translate(0, -105%);
    
   }
 
-
-
+  @include desktop {
+    height: 24px;
+    width: 70px;
+    font-size: 10px;
+     padding-bottom: 10px;
+    transform: translate(105%, 0);
+    display: flex;
+    text-align: center;
+     writing-mode: initial; 
+    align-items: center; 
+   
+  }
 }
