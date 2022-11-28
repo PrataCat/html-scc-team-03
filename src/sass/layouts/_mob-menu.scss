@@ -13,7 +13,7 @@
   // background-repeat: no-repeat;
   // background-position: center;
   // background-size: cover;
-  
+
   // @include retina {
   //   background-image: url(../images/background/frame-4521-m-2x.jpg);
   // }
@@ -27,14 +27,13 @@
   //   }
   // }
 
-  // @include desktop {
-  //   @media screen and (min-width: 1280px) {
-  //     display: none;
-  //   }
-  // }
+  @include desktop {
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
+  }
 
   background-color: #001010;
-  
 }
 
 .menu.is-hidden {
@@ -63,7 +62,7 @@
   fill: #86e543;
   cursor: pointer;
   background: transparent;
-  
+
   @include desktop {
     display: none;
   }
