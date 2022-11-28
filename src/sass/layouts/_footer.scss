@@ -95,7 +95,6 @@
 
   @include tablet {
     display: flex;
-    
   }
 
   @include desktop {
@@ -126,31 +125,28 @@
 
 .social__link {
   position: absolute;
-  top:0;
+  top: 0;
   left: 2%;
- 
-  transform: translatex(295%);
 
+  transform: translatex(295%);
 
   width: 24px;
   height: 24px;
   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
-   transition: filter var(--timing-function);
+  transition: filter var(--timing-function);
 
-
-   @include tablet {
+  @include tablet {
     top: 24%;
     left: 101%;
     transform: translate(-100%, -100%);
-
   }
 
   @include desktop {
-    top:51%;
+    top: 51%;
     left: 100%;
     transform: translate(-100%, -50%);
   }
@@ -159,25 +155,23 @@
   &:focus {
     filter: var(--box-shadow-light);
 
-  
-     .share__button-secondary--content {
-       transform: translate3d(0, 0, 0);
+    .share__button-secondary--content {
+      transform: translate3d(0, 0, 0);
 
-       @include tablet {
-       transform: translatex(-42%);
+      @include tablet {
+        transform: translatex(-42%);
       }
-       @include desktop {
+      @include desktop {
         transform: translate3d(0, -32%, 0);
-        }
-     }
+      }
+    }
     .share__button {
       cursor: pointer;
-     background-color: var(--accent);
+      background-color: var(--accent);
       box-shadow: 0 4px 4px #86e54333;
-      border: 1px solid #86e543; 
+      border: 1px solid #86e543;
     }
   }
-
 }
 
 .social__icon {
@@ -190,9 +184,9 @@
 
     .share__button {
       cursor: pointer;
-     background-color: var(--accent);
+      background-color: var(--accent);
       box-shadow: 0 4px 4px #86e54333;
-      border: 1px solid #86e543; 
+      border: 1px solid #86e543;
     }
   }
 }
@@ -248,78 +242,71 @@
 // -----anime
 // .share__buttons {
 // }
-  
 
 .share__button {
-   display: flex;
-   position: relative;
+  display: flex;
+  position: relative;
+  width: 95px;
+  height: 24px;
+  border-radius: 12px;
+  transition: transform var(--timing-function);
+  transition: background-color var(--timing-function);
+
+  @include tablet {
+    display: block;
+    width: 24px;
+    height: 100px;
+  }
+
+  @include desktop {
+    display: flex;
     width: 95px;
     height: 24px;
-    border-radius: 12px;
-    transition: transform var(--timing-function);
-    transition: background-color var(--timing-function);
-  
+  }
 
-    @include tablet {
-      display: block;
-      width: 24px;
-      height: 100px;
-     
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--accent);
+    box-shadow: 0 4px 4px #86e54333;
 
+    .social__icon {
+      fill: var(--accent);
     }
-  
-    @include desktop {
-      display: flex;
-      width: 95px;
-      height: 24px; 
-    }
-
-
-   &:hover,
-   &:focus {
-     cursor: pointer;
-     background-color: var(--accent);
-     box-shadow: 0 4px 4px #86e54333;
-     
-
-     .social__icon{
-       fill: var(--accent);
-    }
-     .share__button-secondary--content {
+    .share__button-secondary--content {
       transform: translate3d(0, 0, 0);
 
       @include tablet {
-       transform: translatex(-42%);
+        transform: translatex(-42%);
       }
       @include desktop {
         transform: translate3d(0, -32%, 0);
       }
     }
-   }
+  }
 }
 
 .share__button-secondary {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-
- }
+}
 
 .share__button-secondary--content {
   font-family: var(--main-font);
   font-weight: 400;
   line-height: 0.4;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
   text-transform: capitalize;
   text-transform: uppercase;
-   height: 24px;
-   width: 70px;
-   font-size: 8px;
-   transform: translate(105%, 0);
-   display: flex;
-   writing-mode: initial;
-   justify-content: center; 
-   align-items: center; 
+  height: 24px;
+  width: 70px;
+  font-size: 8px;
+  transform: translate(105%, 0);
+  display: flex;
+  writing-mode: initial;
+  justify-content: center;
+  align-items: center;
 
   color: var(--primary-text-color);
   border-radius: 12px;
@@ -329,30 +316,28 @@
     display: block;
     padding-top: 22px;
     height: 100px;
-    letter-spacing: -0.2em;
+    letter-spacing: -0.3em;
     width: 24px;
     font-size: 8px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    text-align:center;
-    justify-content: center; 
-    align-items: center; 
-     text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
     transform: translate(0, -105%);
-   
   }
 
   @include desktop {
     height: 24px;
     width: 70px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     font-size: 10px;
-     padding-bottom: 10px;
+    padding-bottom: 10px;
     transform: translate(105%, 0);
     display: flex;
     text-align: center;
-     writing-mode: initial; 
-    align-items: center; 
-   
+    writing-mode: initial;
+    align-items: center;
   }
 }
