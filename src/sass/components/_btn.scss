@@ -166,7 +166,7 @@
 .container-accessories-btn {
   display: flex;
   margin: 0 auto;
-  width: 272px;
+  max-width: 272px;
   padding: 0;
 
   @include tablet {
